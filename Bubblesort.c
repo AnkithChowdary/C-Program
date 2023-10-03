@@ -15,7 +15,6 @@ void main()
 }
 void sort(int arr[],int n)
 {
-  
     for(int j=0; j<n; j++)
 {
       if(arr[j]>arr[j+1])
