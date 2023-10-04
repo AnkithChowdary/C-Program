@@ -2,7 +2,13 @@
 int top=-1;
 int n= 5;
 int st[5];
-
+ void display()
+ {
+  for(int i=top; i>=0; i--)
+  {
+    printf("%d\n",st[i]);
+  }
+ }
 void pop()
 {
   if(top==-1){
@@ -12,7 +18,9 @@ void pop()
     int an =st[top];
     printf("%d\n",an);
     top--;
+    printf("Stack after pop\n");
   }
+  display();
 }
 
 void push(int d)
@@ -24,7 +32,9 @@ void push(int d)
    {
      top++;
      st[top]=d;
+     printf("Stack after push\n");
    }
+   display();
 }
 
 void peek()
@@ -35,10 +45,16 @@ void peek()
   {
     printf("%d\n",st[top]);
   }
+  display();
 }
 
 int main()
-{
+{ 
+ int y;
+ printf("Enter the number of operations you want to do");
+ scanf("%d",&y);
+ while(y--)
+ {
   int k;
   printf("1.Pop\n2.push\n3.peek\n");
   scanf("%d",&k);
@@ -60,6 +76,7 @@ int main()
       printf("Invalid choice\n");
       break;
   }
+ }
   for(int i=top;i>=0; i--)
   {
     printf("%d\n",st[i]);
