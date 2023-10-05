@@ -7,7 +7,6 @@ void main()
   int n;
   scanf("%d",&n);
   int ans=pa(n, 0);
-  printf("%d\n",ans);
   if(ans==n)
     printf("Palindrome\n");
   else
