@@ -18,8 +18,6 @@ void main()
           break;
         } 
       
-        
-      
     }
     printf("out the loop");
 }
