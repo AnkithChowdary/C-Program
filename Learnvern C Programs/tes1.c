@@ -1,15 +1,16 @@
 #include<stdio.h>
 void main()
 {
-  int n=70,p,c=0,j=0;
-  int freq[n];
-  for(int i=n;i>=58; i--)
+  int n=70,c,j=0;
+  for(int i=1; i<=58; i++)
   {
+    c=0;
     for(int k=2; k<=i;k++){
-    if(i%k==0)
-    c++;}
+      if(i%k==0)
+        c++;
+    }
     if(c==1)
-    j++;
+      j++;
   }
   printf("%d",n-j*2);
 }
