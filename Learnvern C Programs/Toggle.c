@@ -1,8 +1,8 @@
 #include<stdio.h>
 void main()
 {
-  int n,k;      //001
+  int n,k;
   scanf("%d %d",&n,&k);
-  n=(n||(1<<k));    //101   
+  n=n^1;
   printf("%d",n);
 }
