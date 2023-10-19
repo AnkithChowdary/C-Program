@@ -124,11 +124,12 @@ void max()
 
    printf("Maximum value is: %d\n",max);
 }
+
 void display()
 {
   ptr=head;
 
-  while(ptr->next!=NULL)
+  while(ptr!=NULL)
   {
       printf("%d ",ptr->n);
       ptr=ptr->next;
@@ -136,12 +137,33 @@ void display()
   printf("\n");
 }
 
+void count()
+{
+    int count=0;
+    
+    ptr=head;
+    while(ptr!=NULL)
+    {
+        count++;
+
+        ptr=ptr->next;
+
+    }
+    printf("%d\n",count);
+}
+
+ find()
+ {
+    ptr=head;
+    
+ }
+
 int main()
 {
     int choice;
 
     while(1){
-        printf("\n1.CREATE\n2.DELETE AT END\n3.DELETE AT BEGINNING\n4.MINIMUM\n5.MAXIMUM\n6.DISPLAY\n7.EXIT\n");
+        printf("\n1.CREATE\n2.DELETE AT END\n3.DELETE AT BEGINNING\n4.MINIMUM\n5.MAXIMUM\n6.DISPLAY\n7.COUNT\n8.EXIT\n");
         scanf("%d",&choice);
 
         switch(choice)
@@ -168,8 +190,13 @@ int main()
 
             case 6:
                display();
+               break;
 
             case 7:
+               count();
+               break;
+
+            case 8:
                 exit(0);
             
             
