@@ -152,18 +152,50 @@ void count()
     printf("%d\n",count);
 }
 
- find()
+ void find(int s)
  {
     ptr=head;
-    
+    while(ptr!=NULL)
+    {
+        if(ptr->n==s)
+        {
+            printf("FOUND\n");
+            break;
+        }
+        ptr=ptr->next;
+    }
  }
+
+  void deletePos(int n)
+{
+    int i=0;
+    struct node *nextnode;
+    if(n==0)
+    {
+        nextnode=head;
+        head=head->next;
+    }
+    else
+    {
+        ptr=head;
+        while(i<n-1)
+        {
+            ptr=ptr->next;
+            i++;
+        }
+        nextnode=ptr->next;
+        ptr->next=nextnode->next;
+    }
+    free(nextnode);
+}
+
 
 int main()
 {
     int choice;
 
     while(1){
-        printf("\n1.CREATE\n2.DELETE AT END\n3.DELETE AT BEGINNING\n4.MINIMUM\n5.MAXIMUM\n6.DISPLAY\n7.COUNT\n8.EXIT\n");
+        printf("\n1.CREATE\n2.DELETE AT END\n3.DELETE AT BEGINNING\n4.MINIMUM\n5.MAXIMUM\n6.DISPLAY\n7.COUNT\n8.DeletePos\n9.FIND\n10.EXIT\n");
         scanf("%d",&choice);
 
         switch(choice)
@@ -195,8 +227,24 @@ int main()
             case 7:
                count();
                break;
-
+            
             case 8:
+               int k;
+               printf("Enter the position:");
+               scanf("%d",&k);
+               deletePos(k);
+               break;
+
+            case 9:
+            int a;
+            printf("Enter the number:");
+
+            scanf("%d",a);
+
+            find(a);
+            break;
+
+            case 10:
                 exit(0);
             
             
