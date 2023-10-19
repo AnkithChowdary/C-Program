@@ -37,16 +37,18 @@ void main()
   //   }
   //   printf("\n\n");
   // }
-  int multi=0; 
-    for(int i=0; i<3; i++)
+   
+    for(int i=0; i<3; i++)                     //Multiplication of 2d arrays(matrix multiplication)
     {
       for(int j=0; j<3; j++)
       {
+        int multi=0;                          
         for(int k=0; k<3; k++){
-        multi+=arr1[i][k]*arr2[k][j];
+        multi+=arr1[i][k]*arr2[k][j];                   //multi+=arr1[i][j]*arr2[i][j];
+                                                   // You might think why can't we use this but the exact problem is you are storing only one element sum and the whole row and column sum
         }
         arr3[i][j]=multi;
-      }                          //Multiplication of 2d arrays(matrix multiplication)
+      }                          
     } 
     for(int i=0; i<3; i++)
   {
