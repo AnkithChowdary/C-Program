@@ -1,15 +1,15 @@
 #include<stdio.h>
-#include<math.h>
+#include<stdlib.h>
 struct node
 {
   int n;
   struct node *next;
-}*head=NULL,*newnode,*ptr;
+}*head=NULL,*newnode,*ptr,*pre;
 void main()
 {
   do{
   int n;
-  printf("1.Create\n2.insert\n");
+  printf("1.Create\n2.insert\n3.delete\n4.DelFirst\n");
   scanf("%d",&n);
   switch (n)
   {
@@ -19,7 +19,7 @@ void main()
   case 2:
    insert();
    case 3:
-   min();
+   delete();
   default:
     break;
   }
@@ -60,8 +60,22 @@ min()
   }
   printf("%d",min);
 }
-delete()
+deleteBeg()
 {
   ptr=head;
-  
+  head=head->next;
+  ptr->next=NULL;
+  free(ptr);
+
+}
+deleteEnd()
+{
+  ptr=head;
+  pre=head;
+  while(ptr->next!=NULL)
+  {
+    pre=pre->next;
+    ptr=ptr->next;
+     
+  }
 }
