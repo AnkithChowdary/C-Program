@@ -136,7 +136,11 @@ void display()
   }
   printf("\n");
 }
-
+void insertbeg()
+{
+    newnode->next=head;
+    head=newnode;
+}
 void count()
 {
     int count=0;
@@ -188,6 +192,22 @@ void count()
     }
     free(nextnode);
 }
+  void insertPos(int c)
+  {
+    newnode=malloc(sizeof(struct node));
+    scanf("%d",&(newnode->n));
+    ptr=head;
+    int i=1;
+    while(i!=c)
+    {
+       ptr=ptr->next;
+       i++;
+    }
+    pre=ptr->next;
+    newnode->next=pre;
+    ptr->next=newnode;
+
+  }
 
 
 int main()
@@ -195,7 +215,7 @@ int main()
     int choice;
 
     while(1){
-        printf("\n1.CREATE\n2.DELETE AT END\n3.DELETE AT BEGINNING\n4.MINIMUM\n5.MAXIMUM\n6.DISPLAY\n7.COUNT\n8.DeletePos\n9.FIND\n10.EXIT\n");
+        printf("\n1.CREATE\n2.DELETE AT END\n3.DELETE AT BEGINNING\n4.MINIMUM\n5.MAXIMUM\n6.DISPLAY\n7.COUNT\n8.DeletePos\n9.FIND\n10.InsertPos\n11.Exit\n");
         scanf("%d",&choice);
 
         switch(choice)
@@ -238,13 +258,18 @@ int main()
             case 9:
             int a;
             printf("Enter the number:");
-
             scanf("%d",a);
-
             find(a);
             break;
 
             case 10:
+            int d;
+            printf("Enter the position:");
+            scanf("%d",&d);
+            insertPos(d);
+            break;
+
+            case 11:
                 exit(0);
             
             
