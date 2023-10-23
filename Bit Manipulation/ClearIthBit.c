@@ -6,7 +6,7 @@ void main()
 
   scanf("%d%d",&n,&i);
 
-  int s=-1<<i;
+  int s=~(1<<i);
 
   int ans=n&s;
   
