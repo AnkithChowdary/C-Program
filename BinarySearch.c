@@ -20,8 +20,6 @@ void main()
 }
  void sort(int arr[], int n, int k)
 {
-  for(int i=0 ; i<n-1; i++)
-  {
     for(int j=0; j<n-1;j++)
     {
       if(arr[j]>arr[j+1])
@@ -31,7 +29,7 @@ void main()
         arr[j+1]=temp;
       }
     }
-  }
+  
 }
 
 int search(int arr[], int n, int k)
@@ -57,3 +55,24 @@ int search(int arr[], int n, int k)
 
  return -1;
 }
+// int arr[11]={1,5,7,9,14,17,20,44,50,77,80};
+//      int k,flag=0;
+//      scanf("%d",&k);
+//      int l=0,r=10;
+//      while(l<=r){
+//      int mid=(l+r)/2;
+//      if(arr[mid]==k)
+//      {
+//          printf("Found at index:%d",mid);
+//          flag=1;
+//          break;
+//      }else if(k>arr[mid]){
+//          l=mid+1;
+//      }else
+//      {
+//          r=mid-1;
+//      }
+         
+//      }
+//      if(flag==0)
+//      printf("Number not found!");
