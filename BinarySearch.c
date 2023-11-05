@@ -44,7 +44,6 @@ int search(int arr[], int n, int k)
   }else if(k==arr[m])
   {
     return m;
-    break;
   }else
   {
     r=m-1;
