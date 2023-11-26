@@ -11,6 +11,8 @@ struct persons
 
 int main()
 {
+   /* The code you provided is creating a structure called `persons` which contains the following
+   fields: `name`, `id`, `schoolName`, `FatherName`, and `exp`. */
     int n;
     printf("Enter the number of persons: ");
     scanf("%d", &n);
