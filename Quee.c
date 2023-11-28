@@ -33,6 +33,7 @@ int main()
   while(1){
   int n,x;
   printf("1.enquee\n2.dequee\n3.display\n");
+  printf("Enter your selection:");
   scanf("%d",&n);
   switch (n)
   {
