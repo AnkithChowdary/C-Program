@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+#include<stdlib.h>
 struct node{
 	int n;
 	struct node *next;
@@ -103,8 +103,9 @@ insertend()
  {
  	ptr=start;
  	while(ptr!=NULL)
- 	{ printf("%d",ptr->n);
- 	ptr=ptr->next;
+ 	 { 
+	  printf("%d ",ptr->n);
+ 	  ptr=ptr->next;
 	 }
  }
  
@@ -159,6 +160,7 @@ insertend()
  		ptr=ptr->next;
 	 }
 	 pre->next=ptr->next;
+	 ptr->next=NULL;
 	 free(ptr);	
  }
  
@@ -172,6 +174,7 @@ insertend()
 	 	printf("enter position");
  	scanf("%d",&pos);
  		ptr=start;
+		newnode=malloc(sizeof(struct node));
  	while(x!=pos)
  	{
  		pre=ptr;
@@ -184,7 +187,7 @@ insertend()
  
  
  
- search()
+ void search()
  {
  	int x=0,key;
  	printf("enter the key");

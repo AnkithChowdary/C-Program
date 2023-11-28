@@ -10,9 +10,10 @@ void enquee(int k)
   else if(front==-1&&rear==-1){
   rear=front=0;
   arr[rear]=k;}
-  else
+  else{
   rear++;
   arr[rear]=k;
+  }
 }
 void dequee()
 {
