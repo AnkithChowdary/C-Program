@@ -19,7 +19,7 @@ void dequee()
 {
   if(rear==-1)
   printf("UNDERFLOW\n");
-  else if(rear==-1&&front==-1)
+  else if(rear==-1&&front==-1&&front>rear)
   rear=front=-1;
   else
   front++;
