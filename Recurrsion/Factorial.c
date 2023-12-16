@@ -4,7 +4,6 @@ int fac(int c){
   return 1;
   int z=c*fac(c-1);
   return z;
-
 }
 void main(){
   int n;
