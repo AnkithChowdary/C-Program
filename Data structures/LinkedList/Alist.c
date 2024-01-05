@@ -6,7 +6,6 @@ struct node
     int n;
     struct node *next;
 }*head=NULL,*pre,*ptr,*newnode;
-
 void create()
 {
     newnode=malloc(sizeof(struct node));
