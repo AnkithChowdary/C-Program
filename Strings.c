@@ -3,8 +3,8 @@
 void main()
 {
    char n1[20]="Hi bhomraj";
-   char n2[19]="I hope you are fine";
-   char n3[24]="dhdjs";
+   char n2[]="I hope you are finec";
+   char n3[]="dhdjs";
    int len;
    strcpy(n1,n2);
    printf("%s\n",n1);

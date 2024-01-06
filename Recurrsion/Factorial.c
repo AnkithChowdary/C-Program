@@ -1,6 +1,6 @@
 #include<stdio.h>
 int fac(int c){
-  if(c==0)
+  if(c==1)
   return 1;
   int z=c*fac(c-1);
   return z;
