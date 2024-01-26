@@ -1,6 +1,6 @@
 // Heap Sort in C
 #include <stdio.h>
-
+//Forgot 😒 Go and watch shardha mam video 😊
 
 // To heapify a subtree rooted with node i
 // which is an index in arr[].
