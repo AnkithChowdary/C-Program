@@ -1,13 +1,13 @@
 #include<stdio.h>
 void insertionSort(int arr[],int c){
   for(int i=1; i<c; i++){             // Actually here you are taking the first element as sorted sublist and all others as unsorted sublist
-    int current=arr[i];                   // Current
+    int key=arr[i];                   // Current
      int j=i-1;
-     while(j>=0&&arr[j]>current){
+     while(j>=0&&arr[j]>key){
       arr[j+1]=arr[j];                 // Swaping until we meet the end(left most) from the current element 
-      j--;
+      j=j-1;
      }
-     arr[j+1]=current;
+     arr[j+1]=key;
   }
 }
 
