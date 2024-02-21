@@ -32,13 +32,15 @@ void printList(struct node* list) {
 }
 
 struct node* reverseIterative(struct node* list) {
-    struct node *prev = NULL, *current = list, *next;
+    struct node *prev = NULL, *current = list, *nextnode;
 
     while (current != NULL) {
-        next = current->next;
+        nextnode = current->next;
         current->next = prev;
+
+        
         prev = current;
-        current = next;
+        current = nextnode;
     }
 
     return prev; // new head of the reversed list
@@ -64,12 +66,12 @@ int main() {
     printf("Original List:\n");
     printList(head);
 
-    printf("\nReversed Iteratively:\n");
-    struct node* reversedIterativeList = reverseIterative(head);
-    printList(reversedIterativeList);
+    // printf("\nReversed Iteratively:\n");
+    // struct node* reversedIterativeList = reverseIterative(head);
+    // printList(reversedIterativeList);
 
     printf("\nReversed Recursively:\n");
-    struct node* reversedRecursiveList = reverseRecursive(reversedIterativeList);
+    struct node* reversedRecursiveList = reverseRecursive(head);
     printList(reversedRecursiveList);
 
     return 0;
