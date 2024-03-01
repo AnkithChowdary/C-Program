@@ -31,6 +31,7 @@ p=p->next;
 
 
 int main(){
+  
   int n;
   scanf("%d",&n);
   while(n-->0)
