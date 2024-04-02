@@ -1,7 +1,7 @@
 #include<stdio.h>
 //Merge Sort
 //Forgot 😒 Go and watch 'Take you forward' video 😊
-int partition(int arr[],int low,int mid,int high){
+int merge(int arr[],int low,int mid,int high){
     /* The code snippet is performing the merging step of the merge sort algorithm. */
     int i=low,j=mid+1,temp[high-low+1],k=0;
     while(i<=mid&&j<=high){
@@ -36,7 +36,7 @@ void mergeSort(int arr[],int low,int high){
     int mid=low+(high-low)/2;
     mergeSort(arr,low,mid);
     mergeSort(arr,mid+1,high);
-    partition(arr,low,mid,high);
+    merge(arr,low,mid,high);
 }
 void main(){
     int arr[]={7,4,9,0,4,5,8};
