@@ -26,14 +26,14 @@ int priority(char z) {
 int main() {
     char s[100];
     printf("Enter an infix expression: ");
-    scanf("%s", s); // Read until newline character
+    scanf("%s", s); 
     char *p = s;
     char x;
     while (*p != '\0') {
-        if (isspace(*p)) {
-            p++; // Skip whitespace characters
-            continue;
-        }
+        // if (isspace(*p)) {
+        //     p++; // Skip whitespace characters
+        //     continue;
+        // }
         if (isalnum(*p))
             printf("%c", *p);
         else if (*p == '(')

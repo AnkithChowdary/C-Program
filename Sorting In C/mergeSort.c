@@ -1,6 +1,5 @@
 #include<stdio.h>
 //Merge Sort
-//Forgot 😒 Go and watch 'Take you forward' video 😊
 int merge(int arr[],int low,int mid,int high){
     /* The code snippet is performing the merging step of the merge sort algorithm. */
     int i=low,j=mid+1,temp[high-low+1],k=0;
