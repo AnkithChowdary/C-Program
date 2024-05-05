@@ -1,5 +1,5 @@
 #include<stdio.h>
-void main()
+int main()
 {
     int num[3]={1,2,3},*p,*q,*r,i; char k;
     printf("The Numbers are :");
@@ -33,5 +33,6 @@ void main()
     break;
    }
     
+   return 0;
 
 }

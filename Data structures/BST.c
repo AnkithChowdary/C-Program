@@ -166,6 +166,8 @@ int main() {
                 } else {
                     printf("Tree is empty\n");
                 }
+                    printf("Tree is empty\n");
+                
                 break;
             case 5:
                 temp = findMax(root);
